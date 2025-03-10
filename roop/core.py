@@ -50,7 +50,7 @@ def parse_args() -> None:
     roop.globals.headless = False
 
     program = argparse.ArgumentParser(formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=100))
-    program.add_argument('--server_share', help='Public server', dest='server_share', action='store_true', default=False)
+    program.add_argument('--server_share', help='Public server', dest='server_share', action='store_true', default=True)
     program.add_argument('--cuda_device_id', help='Index of the cuda gpu to use', dest='cuda_device_id', type=int, default=0)
     roop.globals.startup_args = program.parse_args()
     # Always enable all processors when using GUI
